@@ -1,0 +1,316 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    align-content: center;
+}
+
+.mainDiv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: skyblue;
+}
+
+.centerDiv {
+    position: ;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+h1 {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: #ecf0f1;
+    text-shadow: 1px 2px 3px #2980b9;
+    font-size: 2.1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+textarea {
+    background-color: #444;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0;
+    border: 10px solid #34495e;
+    color: white;
+    font: 1.3rem;
+}
+
+.mainbtn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 5px solid #2980b9;
+    background: #ecf0f1;
+    font-size: 1rem;
+}
+
+.keybordcontainer {
+    align-items: bottom;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+
+
+
+.key {
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 1;
+    max-height: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.key--a {
+    background-color: #fff;
+    border-bottom: 1px solid #a9a9a9;
+    border-top: 1px solid #fff;
+    color: #4a4a4a;
+}
+
+.key--b {
+    background-color: #fff;
+    border: 1px solid #a9a9a9;
+    color: #4a4a4a;
+}
+
+.key--detail {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #f2f2f2, transparent);
+    border-bottom: 1px solid #a9a9a9;
+    border-top: 1px solid #fff;
+}
+
+.key--rspnsv {
+    font-size: 11px;
+}
+
+@media screen and (min-width: 500px) {
+    .key--rspnsv {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .key--rspnsv {
+        font-size: 16px;
+    }
+}
+
+.key--rspnsv:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+.key--twoWords .key-label--1,
+.key--twoWords .key-label--2 {
+    margin-left: 2px;
+}
+
+.key--twoWords.key-20 .key-label--1 {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .key--twoWords.key-20 .key-label--1 {
+        display: block;
+    }
+}
+
+.key--duo {
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.key--duo .key-label:first-child {
+    height: 0;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+    .key--duo .key-label:first-child {
+        height: 50%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key--duo .key-label:last-child {
+        height: 50%;
+        top: 50%;
+    }
+}
+
+.key--special.key {
+    text-transform: lowercase;
+}
+
+.key--special .key-label {
+    align-items: flex-end;
+    bottom: 5px;
+    color: #a9a9a9;
+    display: none;
+    height: calc(100% - 5px);
+    font-size: 6px;
+    width: calc(100% - 5px);
+}
+
+@media screen and (min-width: 500px) {
+    .key--special .key-label {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .key--special .key-label {
+        color: #4a4a4a;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .key--special .key-label {
+        font-size: 12px;
+    }
+}
+
+.key--special-l .key-label {
+    justify-content: flex-start;
+    left: 5px;
+}
+
+.key--special-r .key-label {
+    justify-content: flex-end;
+    right: 5px;
+}
+
+.key--placement {
+    height: 32px !important;
+}
+
+.key-label {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.keyboard {
+    box-sizing: border-box;
+    position: bottom;
+    z-index: 1;
+}
+
+.keyboard.is-localized .key-16.key--special-l {
+    flex-basis: 113px;
+}
+
+.keyboard.is-localized .key-16.key--special-r {
+    flex-basis: 51px;
+}
+
+.keyboard.is-localized .key-13 {
+    flex-basis: 25px;
+}
+
+.keyboard.is-localized .key-20 {
+    flex-basis: 89px;
+}
+
+.keyboard--a {
+    background-color: #D9DADB;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.keyboard--detail {
+    background-color: #D9DADB;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background-image: linear-gradient(#cccdce, #e1e1e2 7%, #cdcfcf);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.26), 0 1px 0 #8b8e90, 0 2px 0 #a6a9ab, 0 3px 0 #919191, 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.keyboard--full {
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+.keyboard--c {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.keyboard--placement {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.keyboard--placement:hover {
+    background-color: #eaeaea;
+}
+
+.keyboard--placement.is-active {
+    background-color: #eaeaea;
+}
+
+.keyboard-row {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    max-height: 50px;
+}
+
+.keyboard-row:last-child {
+    margin-bottom: 0;
+}
+
+.keyboard-key {
+    flex: 1;
+    flex-basis: 40px;
+    margin-right: 5px;
+}
+
+.keyboard-key:last-child {
+    margin-right: 0;
+}
+
+.keyboard-placementContents {
+    padding: 5px 20px;
+}
+
+.keyboard-placementContents .keyboard-row {
+    margin-bottom: 3px;
+}
+
+.keyboard-placementKey {
+    flex: 1;
+    flex-basis: 50px;
+    margin-right: 5px;
+}
+
+.keyboard-placementKey:last-child {
+    margin-right: 0;
+}
+
+.keyboard-placementTitle {
+    font-size: 12px;
+    padding: 0 5px 5px;
+    text-align: center;
+}
